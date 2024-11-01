@@ -19,7 +19,7 @@
   "timeline": [
     {
       "date": "June 2021",
-      "title": "internship",
+      "title": "Internship",
       "company": "Teleaudyt",
       "web": "https://www.teleaudyt.pl",
       "description": "MS Services like Azure, Server, Intune, Apps (schedule app and key pass with db in excel)"
@@ -40,7 +40,7 @@
     },
     {
       "date": "June 2024",
-      "title": "internship",
+      "title": "Junior Python Developer",
       "company": "VUMO",
       "web": "https://vumo.ai",
       "description": "1. Developed like-Postman API tester and verifier (with features created to given needs), executed on Jenkins. Having designed custom conf. files and internal tools to manage it. Highly automated. 2. Developed .NET app builder with automated push to JFrog Artifactory on every GitHub push. Based on Jenkins."
