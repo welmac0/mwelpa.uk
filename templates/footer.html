@@ -1,0 +1,12 @@
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top bg-light">
+    <div class="container text-center">
+        <span class="text-secondary">© 2024 Maciej Wełpa | Proudly self-made and self-hosted at 30-198</span>
+
+        <!-- Ikony social media -->
+        <div class="mt-2">
+            {% for name, link in content["links"].items() %}
+            <a href="{{link[0]}}" class="text-secondary mx-2"><i class="{{link[1]}}"></i></a>
+            {% endfor %}
+        </div>
+    </div>
+</footer>

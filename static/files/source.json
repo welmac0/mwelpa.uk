@@ -1,0 +1,49 @@
+{
+  "links": {
+    "Github": ["https://github.com/welmac0","fab fa-github"],
+    "LinkedIn": ["https://linkedin.com/in/mwelpa", "fab fa-linkedin"],
+    "X.com": ["https://x.com/MWelpa_", "fab fa-x"],
+    "mwelpa0@gmail.com": ["mailto:mwelpa0@gmail.com", "fa-at"]
+  },
+  "skills": {
+    "Python": "/img/py.png",
+    "SQL": "/img/sql.svg",
+    "Postman": "/img/po.png",
+    "Office365": "/img/off.jpeg",
+    "CI/CD (Jenkins)": "/img/jenkins.png",
+    "Docker Basics ": "/img/docker.png",
+    "UNIX CLI": "/img/cli.jpg",
+    "VC (Github)": "/img/gh.png",
+    "Markdown": "/img/md.png"
+  },
+  "timeline": [
+    {
+      "date": "June 2021",
+      "title": "internship",
+      "company": "Teleaudyt",
+      "web": "https://www.teleaudyt.pl",
+      "description": "MS Services like Azure, Server, Intune, Apps (schedule app and key pass with db in excel)"
+    },
+    {
+      "date": "June 2022",
+      "title": "Junior QA",
+      "company": "VUMO",
+      "web": "https://vumo.ai",
+      "description": "Creating test scenarios and testing products"
+    },
+    {
+      "date": "June 2023",
+      "title": "Trainee Programmer in C#",
+      "company": "VUMO",
+      "web": "https://vumo.ai",
+      "description": "Assisted in developing .NET MAUI Android App and internal tool in JavaScript to manage workshop inventory with pre-made server side app"
+    },
+    {
+      "date": "June 2024",
+      "title": "internship",
+      "company": "VUMO",
+      "web": "https://vumo.ai",
+      "description": "1. Developed like-Postman API tester and verifier (with features created to given needs), executed on Jenkins. Having designed custom conf. files and internal tools to manage it. Highly automated. 2. Developed .NET app builder with automated push to JFrog Artifactory on every GitHub push. Based on Jenkins."
+    }
+  ]
+}

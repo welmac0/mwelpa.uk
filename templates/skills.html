@@ -1,0 +1,13 @@
+<div class="bg-light text-center px-2 py-4">
+    <h1 class="display-5 fw-bold text-black">Skills</h1>
+    <div class="row gap-2 justify-content-center py-2">
+        {% for skill, img in content["skills"].items() %}
+        <div class="col-lg-auto col-md-4 col-sm-6 col-12 d-flex justify-content-center my-1">
+            <span class="badge d-flex align-items-center p-4 pe-4 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-pill"
+                  style="font-size: 1.25rem;">
+                <img class="rounded-circle mr-4" width="50" height="50" src="{{url_for('static', filename=img)}}" alt=""> {{skill}}
+            </span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
