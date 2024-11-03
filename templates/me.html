@@ -1,17 +1,15 @@
 <div class="text-secondary px-4 py-5 text-center blurred-bg"> <!-- Use blurred-bg class -->
     <div class="py-5">
         <!-- Image Inclusion -->
-        <img src="{{ url_for('static', filename='img/me.jpg') }}" class="img-fluid rounded-circle mb-4"
+        <img src="{{ url_for('static', filename=content['profile']) }}" class="img-fluid rounded-circle mb-4"
              alt="Profile Picture" style="width: 150px; height: 150px;">
 
         <div class="col-lg-6 mx-auto bg-text"> <!-- Use bg-text class -->
             <h1 class="display-5 fw-bold text-white">Maciej Wełpa</h1>
             <p class="fs-5 mb-4">Junior Python developer eager to learn new skills. I'm studying Computer Science at
                 Warsaw University of Technology (1st year). I've been coding in Python for little over 2 years!
-                <!--TODO dodac timer automatyczny i dymek odkad--></p>
             <p><b>I am looking for ✨<b style="color: gold">summer internship/job✨</b>. Let me know if you see me in your
                 team!</b>
-                <!--TODO dodac ikonke listu i skopiowanie maila do schowka--></p>
         </div>
     </div>
 </div>

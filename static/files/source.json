@@ -45,5 +45,7 @@
       "web": "https://vumo.ai",
       "description": "1. Developed like-Postman API tester and verifier (with features created to given needs), executed on Jenkins. Having designed custom conf. files and internal tools to manage it. Highly automated. 2. Developed .NET app builder with automated push to JFrog Artifactory on every GitHub push. Based on Jenkins."
     }
-  ]
+  ],
+  "profile": "/img/me.jpg",
+  "bg-img": "img/python.jpg"
 }
