@@ -9,18 +9,22 @@ app.config['SECRET_KEY'] = os.urandom(24)
 Bootstrap(app)
 
 
-@app.route('/')
-def home():
+def get_content():
     with open("static/files/source.json") as content:
         content = json.loads(content.read())
-    return render_template("index.html", content=content)
+
+    return content
+
+
+@app.route('/')
+def home():
+    return render_template("index.html", content=get_content())
 
 
 @app.route('/iwantresume')
 def give_resume():
-    file = f'static/files/resume.pdf'
+    file = f'static/files/resume_mWelpa.pdf'
     return send_file(file, as_attachment=True)
-
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
