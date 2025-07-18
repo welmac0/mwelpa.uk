@@ -23,6 +23,7 @@ def home():
 
 @app.route('/iwantresume')
 def give_resume():
+    print('test cicd')
     file = f'static/files/resume_mWelpa.pdf'
     return send_file(file, as_attachment=True)
 
