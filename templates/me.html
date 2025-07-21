@@ -1,3 +1,20 @@
+<style>
+    .blurred-bg::before {
+        content: ""; /* Required for pseudo-elements */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("{{ url_for('static', filename=content['bg-img']) }}"); /* Image for background */
+        background-size: cover; /* Ensures the background covers the entire div */
+        background-position: center; /* Centers the image */
+        filter: blur(6px); /* Blurs the background */
+        z-index: -1; /* Puts the background behind the content */
+    }
+
+</style>
+
 <div class="text-secondary px-4 py-5 text-center blurred-bg"> <!-- Use blurred-bg class -->
     <div class="py-5">
         <!-- Image Inclusion -->
@@ -6,10 +23,8 @@
 
         <div class="col-lg-6 mx-auto bg-text"> <!-- Use bg-text class -->
             <h1 class="display-5 fw-bold text-white">Maciej Wełpa</h1>
-            <p class="fs-5 mb-4">Junior Python developer eager to learn new skills. I'm studying Computer Science at
-                Warsaw University of Technology (1st year). I've been coding in Python for little over 3 years!
-            <p><b>I am looking for ✨<b style="color: gold">summer internship/job✨</b>. Let me know if you see me in your
-                team!</b>
+            <p class="fs-5 mb-4"> CS student, amateur programmer, leetcode newbie, ci/cd enjoyer, a little bit a vibe coder though 🥲 However, this page/server/service is crafted by me from ground zero. Additionaly, now it pulls and deploys on its' own!  
+            <p><b>I'm starting ✨<b style="color: gold">second</b>✨ year of studies at WUT MiNI!</b>
         </div>
     </div>
 </div>

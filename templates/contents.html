@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}List of content{% endblock %}
+{% block content %}
+
+<h2 style="margin-left: 20px;">Wszystkie Posty</h2>
+
+<div class="posts-list">
+    {% for post in posts %}
+        <article class="post-summary">
+            <h3>
+                <a href="{{ url_for('blog_post', slug=post.slug) }}">
+                    {{ post.title }}
+                </a>
+            </h3>
+            <p class="post-meta">
+                Opublikowano: {{ post.date }}
+            </p>
+        </article>
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}

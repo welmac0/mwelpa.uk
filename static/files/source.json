@@ -1,10 +1,4 @@
 {
-  "links": {
-    "Github": ["https://github.com/welmac0","fab fa-github"],
-    "LinkedIn": ["https://linkedin.com/in/mwelpa", "fab fa-linkedin"],
-    "X.com": ["https://x.com/MWelpa_", "fab fa-x"],
-    "mwelpa0@gmail.com": ["mailto:mwelpa0@gmail.com", "fa-at"]
-  },
   "skills": {
     "Python": "/img/py.png",
     "SQL": "/img/sql.svg",
@@ -14,22 +8,24 @@
     "Docker Basics ": "/img/docker.png",
     "UNIX CLI": "/img/cli.jpg",
     "VC (Github)": "/img/gh.png",
-    "Markdown": "/img/md.png"
+    "Markdown": "/img/md.png",
+    "C++": "/img/cpp.png",
+    "Selenium": "/img/selenium.png"
   },
   "timeline": [
     {
-      "date": "June 2021",
-      "title": "Internship",
-      "company": "Teleaudyt",
-      "web": "https://www.teleaudyt.pl",
-      "description": "MS Services like Azure, Server, Intune, Apps (schedule app and key pass with db in excel)"
+      "date": "August 2025",
+      "title": "Junior DevOps Developer",
+      "company": "???",
+      "web": "???",
+      "description": "TBA :)"
     },
     {
-      "date": "June 2022",
-      "title": "Junior QA",
+      "date": "June 2024",
+      "title": "Junior Python Developer",
       "company": "VUMO",
       "web": "https://vumo.ai",
-      "description": "Creating test scenarios and testing products"
+      "description": "1. Developed like-Postman API tester and verifier (with features created to given needs), executed on Jenkins. Having designed custom conf. files and internal tools to manage it. Highly automated. 2. Developed .NET app builder with automated push to JFrog Artifactory on every GitHub push. Based on Jenkins."
     },
     {
       "date": "June 2023",
@@ -39,11 +35,18 @@
       "description": "Assisted in developing .NET MAUI Android App and internal tool in JavaScript to manage workshop inventory with pre-made server side app"
     },
     {
-      "date": "June 2024",
-      "title": "Junior Python Developer",
+      "date": "June 2022",
+      "title": "Junior QA",
       "company": "VUMO",
       "web": "https://vumo.ai",
-      "description": "1. Developed like-Postman API tester and verifier (with features created to given needs), executed on Jenkins. Having designed custom conf. files and internal tools to manage it. Highly automated. 2. Developed .NET app builder with automated push to JFrog Artifactory on every GitHub push. Based on Jenkins."
+      "description": "Creating test scenarios and testing products"
+    },
+    {
+      "date": "June 2021",
+      "title": "Internship",
+      "company": "Teleaudyt",
+      "web": "https://www.teleaudyt.pl",
+      "description": "MS Services like Azure, Server, Intune, Apps (schedule app and key pass with db in excel)"
     }
   ],
   "profile": "/img/me.jpg",

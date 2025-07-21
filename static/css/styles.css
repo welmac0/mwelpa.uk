@@ -135,3 +135,123 @@
     left: 0;
     right: -55.8px;
 }
+
+/* gpt */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.post-summary:hover {
+    transform: translateY(-3px);
+}
+
+.post-summary h3 {
+    margin: 0 0 10px;
+}
+
+.post-summary a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.post-summary a:hover {
+    text-decoration: underline;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.post-header-bar {
+    background-color: #ADD8E6; /* Jasnoniebieski kolor */
+    color: #333; /* Ciemniejszy tekst dla kontrastu */
+    padding: 15px 20px; /* Wewnętrzne odstępy */
+    border-radius: 8px 8px 0 0; /* Zaokrąglone górne rogi */
+    margin-bottom: 20px; /* Odstęp od treści posta */
+    display: flex; /* Użyj flexbox, aby ułożyć tytuł i datę */
+    justify-content: space-between; /* Rozłóż elementy na końcach belki */
+    align-items: center; /* Wyśrodkuj pionowo */
+}
+
+.post-header-bar h2 {
+    margin: 0; /* Usuń domyślny margines nagłówka */
+    font-size: 1.8rem; /* Rozmiar czcionki tytułu */
+    color: #333; /* Upewnij się, że kolor tytułu jest odpowiedni */
+    border-bottom: none; /* Usuń ewentualną linię pod tytułem, jeśli była */
+    padding-bottom: 0; /* Usuń ewentualny padding pod tytułem */
+}
+
+.post-header-bar .post-meta {
+    margin: 0; /* Usuń domyślny margines paragrafu */
+    font-size: 0.9rem; /* Rozmiar czcionki daty */
+    color: #555; /* Ciemniejszy kolor dla daty */
+}
+
+/* Możesz też zmodyfikować styl dla całego posta, aby pasował do belki */
+.blog-post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    overflow: hidden; /* Ważne, aby border-radius działał poprawnie z belką */
+}
+
+.blog-post .post-content {
+    padding: 20px; /* Dodaj padding do treści posta */
+}
+
+html, body {
+    height: 100%; /* Upewnij się, że html i body zajmują całą wysokość */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Ustawienie display: flex na body */
+    flex-direction: column; /* Ułożenie elementów w kolumnie */
+}
+
+main {
+    flex-grow: 1; /* Główna treść zajmuje całą dostępną przestrzeń */
+    padding-bottom: 50px; /* Przykładowy padding, aby treść nie nachodziła na stopkę, jeśli stopka ma stałą wysokość */
+}
+
+footer {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+pre {
+    background-color: #a0b2bf;
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+}

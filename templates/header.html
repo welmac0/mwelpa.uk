@@ -1,8 +1,10 @@
 <header class=" d-flex justify-content-center py-3"> <!--TODO zrobic tlo czarn!!! -->
     <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="#" data-toggle="modal" data-target="#socialModal" class="nav-link">Links &
             Contact</a></li>
         <li class="nav-item"><a href="/iwantresume" class="nav-link">Download Resume</a></li>
+        <li class="nav-item"><a href="/contents" class="nav-link">Blog</a></li>
     </ul>
 </header>
 <div class="modal fade" id="socialModal" tabindex="-1" role="dialog" aria-labelledby="socialModalLabel"
@@ -18,13 +20,10 @@
             <div class="modal-body">
                 <p>Connect with me via:</p>
                 <ul class="list-unstyled text-center">
-                    {% for name, link in content["links"].items() %}
-                        {% if name == "X.com" or name == "mwelpa0@gmail.com" %}
-                        <li><a href="{{link[0]}}" class="text-secondary mx-2">{{name}}</a></li>
-                        {% else %}
-                        <li><a href="{{link[0]}}" class="text-secondary mx-2"><i class="{{link[1]}}"></i>{{name}}</a></li>
-                        {% endif %}
-                    {% endfor %}
+                    <li><a href="https://github.com/welmac0" class="text-secondary mx-2"><i class="fab fa-github"></i>GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/mwelpa" class="text-secondary mx-2"><i class="fab fa-linkedin"></i>Linked In</a></li>
+                    <li><a href="https://x.com/MWelpa_" class="text-secondary mx-2">X.com</a></li>  
+                    <li><a href="mailto:mwelpa0@gmail.com" class="text-secondary mx-2">mwelpa0@gmail.com</a></li>
                 </ul>
             </div>
             <div class="modal-footer">
