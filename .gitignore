@@ -6,3 +6,5 @@ venv/
 __pycache__/
 cicd.sh
 webhook_listener.py
+static/files/friendsaccounts.json
+static/files/friends_logs

@@ -3,6 +3,11 @@
 {% block content %}
 
 <h2 style="margin-left: 20px;">Wszystkie Posty</h2>
+{% if friend %}
+<div style="background:#e0ffe0; padding:8px; margin-bottom:16px; border:1px solid #b2d8b2;">
+    Tryb friends – zalogowany jako <b>{{ friend }}</b>
+</div>
+{% endif %}
 
 <div class="posts-list">
     {% for post in posts %}

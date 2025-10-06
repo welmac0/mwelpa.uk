@@ -2,6 +2,7 @@
 
 {% block title %}{{ title }} - Maciej Wełpa{% endblock %}
 
+
 {% block content %}
 <article class="blog-post">
     <div class="post-header-bar">
@@ -10,6 +11,11 @@
             {{ date }}
         </p>
     </div>
+    {% if friend %}
+    <div style="background:#e0ffe0; padding:8px; margin-bottom:16px; border:1px solid #b2d8b2;">
+        Tryb friends – zalogowany jako <b>{{ friend }}</b>
+    </div>
+    {% endif %}
     
     <div class="post-content">
         {{ content | safe }}

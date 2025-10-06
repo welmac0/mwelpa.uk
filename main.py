@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_file
+from flask import Flask, render_template, send_file, session, redirect, url_for, abort
 from flask_bootstrap import Bootstrap
 import json
 import os
@@ -73,12 +73,15 @@ def blog_post(slug):
 
     metadata, html_content = parse_markdown_post(filepath)
     #print(html_content)
+    if filepath.startswith("static/posts/fri") and 'user' not in session:
+        abort(404)
 
     return render_template('blog_post.html',
                            title=metadata.get('title', slug.replace('-', ' ').title()),
                            date=metadata.get('date', 'Brak daty'),
                            author=metadata.get('author', 'Nieznany autor'),
-                           content=html_content)
+                           content=html_content,
+                           friend=session.get('user'))
 
 @app.route('/contents')
 def contents():
@@ -87,6 +90,10 @@ def contents():
     for filename in os.listdir(POSTS_DIR):
         if filename.endswith('.md'):
             filepath = os.path.join(POSTS_DIR, filename)
+
+            if 'user' not in session and filename[:3] == "fri":
+                continue
+
             slug = os.path.splitext(filename)[0]
             metadata, _ = parse_markdown_post(filepath)
             
@@ -108,7 +115,7 @@ def contents():
     # Teraz sortowanie jest bezpieczne, bo wszystkie daty są obiektami date
     posts.sort(key=lambda x: x['date'], reverse=True) 
     
-    return render_template("contents.html", posts=posts)
+    return render_template("contents.html", posts=posts, friend=session.get('user'))
 
 # end of gpt
 
@@ -116,6 +123,19 @@ def contents():
 def give_resume():
     file = f'static/files/resume_mWelpa.pdf'
     return send_file(file, as_attachment=True)
+
+@app.route('/friends/<password>')
+def friends_login(password):
+    with open("static/files/friendsaccounts.json") as accounts:
+        accounts = json.loads(accounts.read())
+
+    for user, pw in accounts.items():
+        if password == pw:
+            session['user'] = user
+            with open("static/files/friends_logs", "a") as log:
+                log.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M')} - {user} logged in\n")
+            return redirect(url_for('contents'))
+    abort(404)
 
 @app.errorhandler(404)
 def page_not_found(e):
