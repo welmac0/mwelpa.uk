@@ -8,7 +8,10 @@ import marko
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.urandom(24)
+SECRET_KEY = os.environ.get('FLASK_SECRET_KEY')
+if not SECRET_KEY:
+    raise ValueError("Brak zmiennej środowiskowej FLASK_SECRET_KEY. Konieczna do uruchomienia!")
+app.config['SECRET_KEY'] = SECRET_KEY
 Bootstrap(app)
 
 
